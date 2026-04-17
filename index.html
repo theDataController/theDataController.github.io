@@ -3,289 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>theDataController | Contrôleur de Gestion & Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>theDataController | Contrôleur de Gestion & Data Analyst – Yaoundé</title>
+    <meta name="description" content="Gilbert Elisée GUESSELE – Contrôleur de Gestion & Data Analyst basé à Yaoundé, Cameroun. 6 ans d'expérience, expert Power BI, Excel, reporting financier et contrôle de gestion pour PME en zone CEMAC.">
+    <meta property="og:title" content="theDataController | Gilbert Elisée GUESSELE">
+    <meta property="og:description" content="Contrôleur de Gestion & Data Analyst – Yaoundé, Cameroun. Tableaux de bord, automatisation, conseil data.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thedatacontroller.github.io/">
+    <link rel="canonical" href="https://thedatacontroller.github.io/">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cyan: #00d4ff;
+            --cyan-dim: rgba(0, 212, 255, 0.12);
+            --cyan-border: rgba(0, 212, 255, 0.25);
+            --bg: #080c18;
+            --bg2: #0d1326;
+            --bg3: rgba(255,255,255,0.03);
+            --text: #e5e9f0;
+            --muted: #8892aa;
+            --faint: rgba(255,255,255,0.05);
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0f1c 0%, #0c1222 100%);
-            color: #e5e9f0;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            min-height: 100vh;
         }
 
-        /* Navigation */
+        /* NAV */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 15, 28, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(8, 12, 24, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cyan-border);
             z-index: 1000;
             padding: 1rem 5%;
         }
-
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1100px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
         }
-
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #00d4ff;
-            text-decoration: none;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--cyan); text-decoration: none; letter-spacing: -0.02em;
         }
-
-        .logo span {
-            color: #e5e9f0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
+        .logo span { color: var(--text); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
-            color: #a0a8c0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            color: var(--muted); text-decoration: none;
+            font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
         }
-
-        .nav-links a:hover {
-            color: #00d4ff;
-        }
-
+        .nav-links a:hover { color: var(--cyan); }
         .btn-nav {
-            background: #00d4ff;
-            color: #0a0f1c !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 600 !important;
+            background: var(--cyan); color: #080c18 !important;
+            padding: 0.45rem 1.1rem; border-radius: 6px;
+            font-weight: 600 !important; font-size: 0.85rem !important;
+            transition: opacity 0.2s;
         }
+        .btn-nav:hover { opacity: 0.85; }
 
-        .btn-nav:hover {
-            background: #00b8e0;
-            color: #0a0f1c !important;
-        }
-
-        /* Hero Section */
+        /* HERO */
         .hero {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 6rem 5% 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex; align-items: center;
+            padding: 7rem 5% 5rem;
+            max-width: 1100px; margin: 0 auto;
+            position: relative;
         }
-
-        .hero-content {
-            flex: 1;
+        .hero::before {
+            content: '';
+            position: absolute; top: 20%; right: -10%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+            pointer-events: none;
         }
-
         .badge {
-            display: inline-block;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 50px;
-            padding: 0.3rem 1rem;
-            font-size: 0.8rem;
-            color: #00d4ff;
-            margin-bottom: 1.5rem;
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: var(--cyan-dim);
+            border: 1px solid var(--cyan-border);
+            border-radius: 50px; padding: 0.3rem 1rem;
+            font-size: 0.78rem; color: var(--cyan); margin-bottom: 1.8rem;
+            font-family: 'DM Sans', sans-serif;
         }
-
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 800; line-height: 1.15;
+            letter-spacing: -0.03em; margin-bottom: 1.2rem;
         }
-
-        .hero h1 .highlight {
-            color: #00d4ff;
-        }
-
+        .hero h1 .highlight { color: var(--cyan); }
         .hero p {
-            font-size: 1.1rem;
-            color: #a0a8c0;
-            max-width: 550px;
-            margin-bottom: 2rem;
+            font-size: 1.05rem; color: var(--muted);
+            max-width: 520px; margin-bottom: 2rem; line-height: 1.7;
         }
-
         .services-list {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
+            display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 2.2rem;
         }
-
         .service-tag {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            padding: 0.5rem 1.2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #c0c8e0;
+            background: var(--faint);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50px; padding: 0.4rem 1rem;
+            font-size: 0.85rem; color: #c0c8e0;
+            transition: border-color 0.2s, color 0.2s;
         }
-
-        .service-tag:hover {
-            border-color: #00d4ff;
-            color: #00d4ff;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
+        .service-tag:hover { border-color: var(--cyan); color: var(--cyan); }
+        .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-primary {
-            background: #00d4ff;
-            color: #0a0f1c;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, background 0.3s;
-            display: inline-block;
+            background: var(--cyan); color: #080c18;
+            padding: 0.8rem 2rem; border-radius: 8px;
+            text-decoration: none; font-weight: 600;
+            font-family: 'Syne', sans-serif; font-size: 0.95rem;
+            transition: opacity 0.2s, transform 0.2s; display: inline-block;
         }
-
-        .btn-primary:hover {
-            background: #00b8e0;
-            transform: translateY(-2px);
-        }
-
+        .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
         .btn-secondary {
-            background: transparent;
-            border: 1px solid #00d4ff;
-            color: #00d4ff;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s, background 0.3s;
-            display: inline-block;
+            background: transparent; border: 1px solid var(--cyan);
+            color: var(--cyan); padding: 0.8rem 2rem; border-radius: 8px;
+            text-decoration: none; font-weight: 600;
+            font-family: 'Syne', sans-serif; font-size: 0.95rem;
+            transition: background 0.2s, transform 0.2s; display: inline-block;
         }
-
-        .btn-secondary:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2.5rem;
-        }
-
-        .stat {
-            text-align: left;
-        }
-
+        .btn-secondary:hover { background: var(--cyan-dim); transform: translateY(-2px); }
+        .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; }
         .stat-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #00d4ff;
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem; font-weight: 700; color: var(--cyan); display: block;
         }
+        .stat-label { font-size: 0.78rem; color: var(--muted); }
 
-        .stat-label {
-            font-size: 0.8rem;
-            color: #7a82a0;
+        /* ABOUT */
+        .about {
+            padding: 6rem 5%;
+            background: var(--bg2);
+            border-top: 1px solid var(--faint);
+            border-bottom: 1px solid var(--faint);
         }
+        .about-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+        }
+        .section-label {
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+            color: var(--cyan); text-transform: uppercase;
+            font-family: 'Syne', sans-serif; margin-bottom: 1rem;
+        }
+        .about h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700; letter-spacing: -0.02em;
+            line-height: 1.2; margin-bottom: 1.2rem;
+        }
+        .about p {
+            font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 1rem;
+        }
+        .about-cards { display: flex; flex-direction: column; gap: 1rem; }
+        .about-card {
+            background: var(--bg3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px; padding: 1.2rem 1.4rem;
+            display: flex; gap: 1rem; align-items: flex-start;
+        }
+        .about-card-icon {
+            font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem;
+        }
+        .about-card-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem;
+        }
+        .about-card-desc { font-size: 0.82rem; color: var(--muted); }
 
-        /* Footer */
+        /* CONTACT */
+        .contact-section {
+            padding: 6rem 5%;
+        }
+        .contact-inner { max-width: 1100px; margin: 0 auto; }
+        .contact-section h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 700; letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .contact-section .sub {
+            color: var(--muted); font-size: 0.95rem; margin-bottom: 2.5rem;
+        }
+        .contact-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+        }
+        .contact-card {
+            background: var(--bg3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px; padding: 1.5rem;
+            text-decoration: none; color: var(--text);
+            transition: border-color 0.2s, transform 0.2s;
+            display: block;
+        }
+        .contact-card:hover {
+            border-color: var(--cyan-border);
+            transform: translateY(-3px);
+        }
+        .contact-card-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+        .contact-card-label {
+            font-size: 0.75rem; color: var(--muted); margin-bottom: 0.3rem;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            font-family: 'Syne', sans-serif;
+        }
+        .contact-card-value { font-size: 0.9rem; font-weight: 500; }
+
+        /* FOOTER */
         footer {
-            text-align: center;
-            padding: 2rem 5%;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #6a7290;
-            font-size: 0.8rem;
+            text-align: center; padding: 2rem 5%;
+            border-top: 1px solid var(--faint);
+            color: #4a5268; font-size: 0.8rem;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero {
-                text-align: center;
-            }
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .services-list {
-                justify-content: center;
-            }
-            .cta-buttons {
-                justify-content: center;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
+            .nav-links { display: none; }
+            .hero { text-align: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .services-list { justify-content: center; }
+            .cta-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">theData<span>Controller</span></a>
-            <div class="nav-links">
-                <a href="cv.html">CV</a>
-                <a href="#contact">Contact</a>
-                <a href="cv.html" class="btn-nav">Me contacter</a>
+
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">theData<span>Controller</span></a>
+        <div class="nav-links">
+            <a href="cv.html">CV</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn-nav">Me contacter</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">📍 Yaoundé, Cameroun · Zone CEMAC</div>
+        <h1>Contrôlez vos données,<br/><span class="highlight">pilotez votre performance.</span></h1>
+        <p>Contrôleur de Gestion & Data Analyst — 6 ans d'expérience dont 4 en cabinet. Je transforme vos données financières en décisions stratégiques claires et actionnables.</p>
+        <div class="services-list">
+            <span class="service-tag">📊 Tableaux de bord</span>
+            <span class="service-tag">⚡ Automatisation</span>
+            <span class="service-tag">🎯 Conseil data</span>
+            <span class="service-tag">📈 Contrôle de gestion</span>
+        </div>
+        <div class="cta-buttons">
+            <a href="cv.html" class="btn-primary">Découvrir mon CV</a>
+            <a href="#contact" class="btn-secondary">Me contacter</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">6+</span>
+                <span class="stat-label">Années d'expérience</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Ans en cabinet</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">−70%</span>
+                <span class="stat-label">Temps de reporting</span>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="badge">📍 Yaoundé, Cameroun · CEMAC</div>
-            <h1>Contrôlez vos données,<br/><span class="highlight">pilotez votre performance.</span></h1>
-            <p>Contrôleur de Gestion & Data Analyst — 6 ans d'expérience dont 4 en cabinet. Je transforme vos données financières en décisions stratégiques.</p>
-            <div class="services-list">
-                <span class="service-tag">📊 Tableaux de bord</span>
-                <span class="service-tag">⚡ Automatisation</span>
-                <span class="service-tag">🎯 Conseil data</span>
-                <span class="service-tag">📈 Contrôle de gestion</span>
-            </div>
-            <div class="cta-buttons">
-                <a href="cv.html" class="btn-primary">Découvrir mon CV</a>
-                <a href="#contact" class="btn-secondary">Me contacter</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">6+</div>
-                    <div class="stat-label">Années d'expérience</div>
+<section class="about" id="about">
+    <div class="about-inner">
+        <div>
+            <div class="section-label">À propos</div>
+            <h2>Un profil rare<br/>pour l'Afrique centrale</h2>
+            <p>Je suis Gilbert Elisée GUESSELE, Contrôleur de Gestion & Data Analyst basé à Yaoundé. Je combine une solide formation en finance et comptabilité avec une expertise croissante en outils data modernes.</p>
+            <p>Mon positionnement est unique dans la zone CEMAC : je parle à la fois le langage des chiffres comptables et celui de la data — ce qui me permet d'accompagner les PME et organisations dans leur transformation vers une gestion pilotée par la donnée.</p>
+            <p style="margin-bottom: 0;">Actuellement Assistant Financial Controller au Cabinet Minala Barthélémy à Yaoundé, je prends également des missions freelance pour des organisations qui souhaitent moderniser leur pilotage financier.</p>
+        </div>
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="about-card-icon">🏢</div>
+                <div>
+                    <div class="about-card-title">Cabinet Minala Barthélémy</div>
+                    <div class="about-card-desc">4 ans d'expérience en cabinet comptable à Yaoundé — comptabilité générale, analytique, audit, conseil aux PME et fiscalité camerounaise (OHADA).</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Ans en cabinet</div>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon">📊</div>
+                <div>
+                    <div class="about-card-title">Expertise Data & Reporting</div>
+                    <div class="about-card-desc">Power BI, Excel avancé (Power Query, TCD), SQL, Python — pour transformer des données brutes en tableaux de bord décisionnels.</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">-70%</div>
-                    <div class="stat-label">Temps de reporting</div>
+            </div>
+            <div class="about-card">
+                <div class="about-card-icon">🎓</div>
+                <div>
+                    <div class="about-card-title">Formation solide</div>
+                    <div class="about-card-desc">Master I en Gouvernance Financière, Licence en Économie Mathématique, Certification Google Data Analytics (en cours).</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer id="contact">
-        <p>📧 guessele.controleur@gmail.com | 📞 +237 621 173 456 | 💬 WhatsApp : +237 653 880 699</p>
-        <p style="margin-top: 0.5rem;">© 2026 Gilbert Elisée GUESSELE · theDataController · Yaoundé, Cameroun</p>
-    </footer>
+<section class="contact-section" id="contact">
+    <div class="contact-inner">
+        <div class="section-label">Contact</div>
+        <h2>Travaillons ensemble</h2>
+        <p class="sub">Disponible pour des missions freelance et des collaborations à Yaoundé et dans toute la zone CEMAC.</p>
+        <div class="contact-grid">
+            <a href="mailto:guessele.controleur@gmail.com" class="contact-card">
+                <div class="contact-card-icon">📧</div>
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value">guessele.controleur@gmail.com</div>
+            </a>
+            <a href="tel:+237621173456" class="contact-card">
+                <div class="contact-card-icon">📞</div>
+                <div class="contact-card-label">Téléphone</div>
+                <div class="contact-card-value">+237 621 173 456</div>
+            </a>
+            <a href="https://wa.me/237653880699" target="_blank" class="contact-card">
+                <div class="contact-card-icon">💬</div>
+                <div class="contact-card-label">WhatsApp</div>
+                <div class="contact-card-value">+237 653 880 699</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Gilbert Elisée GUESSELE · theDataController · Yaoundé, Cameroun</p>
+</footer>
+
 </body>
 </html>

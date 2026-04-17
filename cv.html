@@ -1,387 +1,418 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilbert Elisée GUESSELE | Contrôleur de Gestion & Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>CV – Gilbert Elisée GUESSELE | Contrôleur de Gestion & Data Analyst</title>
+    <meta name="description" content="CV de Gilbert Elisée GUESSELE – Contrôleur de Gestion & Data Analyst, Yaoundé, Cameroun. 6 ans d'expérience en cabinet, expert Power BI, Excel, SQL, normes OHADA.">
+    <meta property="og:title" content="CV – Gilbert Elisée GUESSELE | theDataController">
+    <meta property="og:description" content="Contrôleur de Gestion & Data Analyst basé à Yaoundé – Cabinet Minala Barthélémy. Power BI, Excel, SQL, OHADA.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://thedatacontroller.github.io/cv.html">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cyan: #00d4ff;
+            --cyan-dim: rgba(0, 212, 255, 0.12);
+            --cyan-border: rgba(0, 212, 255, 0.25);
+            --bg: #080c18;
+            --bg2: #0d1326;
+            --bg3: rgba(255,255,255,0.03);
+            --text: #e5e9f0;
+            --muted: #8892aa;
+            --faint: rgba(255,255,255,0.05);
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0f1c;
-            color: #e5e9f0;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
         }
 
-        /* Navigation */
+        /* NAV */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 15, 28, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-            z-index: 1000;
-            padding: 1rem 5%;
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(8, 12, 24, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cyan-border);
+            z-index: 1000; padding: 1rem 5%;
         }
-
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1100px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
         }
-
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #00d4ff;
-            text-decoration: none;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.4rem; font-weight: 700;
+            color: var(--cyan); text-decoration: none; letter-spacing: -0.02em;
         }
-
-        .logo span {
-            color: #e5e9f0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
+        .logo span { color: var(--text); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
-            color: #a0a8c0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            color: var(--muted); text-decoration: none;
+            font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
         }
-
-        .nav-links a:hover {
-            color: #00d4ff;
-        }
-
+        .nav-links a:hover { color: var(--cyan); }
         .btn-nav {
-            background: #00d4ff;
-            color: #0a0f1c !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 600 !important;
+            background: var(--cyan); color: #080c18 !important;
+            padding: 0.45rem 1.1rem; border-radius: 6px;
+            font-weight: 600 !important; font-size: 0.85rem !important;
         }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 7rem 5% 4rem;
-        }
+        /* CONTAINER */
+        .container { max-width: 1100px; margin: 0 auto; padding: 7rem 5% 4rem; }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
+        /* HEADER */
+        .header { margin-bottom: 3.5rem; }
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.4rem;
         }
-
-        .header h1 span {
-            color: #00d4ff;
-        }
-
-        .header .title {
-            font-size: 1.2rem;
-            color: #a0a8c0;
-            margin-bottom: 0.5rem;
-        }
-
-        .header .location {
-            color: #6a7290;
-            font-size: 0.9rem;
-        }
+        .header h1 span { color: var(--cyan); }
+        .header .title { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.3rem; }
+        .header .location { color: #4a5268; font-size: 0.85rem; margin-bottom: 1.5rem; }
 
         .contact-bar {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
+            display: flex; gap: 1rem; flex-wrap: wrap;
+            padding: 1rem 1.2rem;
+            background: var(--bg3);
+            border: 1px solid rgba(255,255,255,0.06);
             border-radius: 12px;
         }
-
         .contact-bar a {
-            color: #a0a8c0;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.3s;
+            color: var(--muted); text-decoration: none; font-size: 0.85rem;
+            transition: color 0.2s; display: flex; align-items: center; gap: 0.4rem;
         }
+        .contact-bar a:hover { color: var(--cyan); }
 
-        .contact-bar a:hover {
-            color: #00d4ff;
-        }
+        /* GRID */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .full-width { grid-column: span 2; }
 
-        /* Grid */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        /* Cards */
+        /* CARDS */
         .card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+            background: var(--bg3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem;
         }
-
         .card-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #00d4ff;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem; font-weight: 700; color: var(--cyan);
+            margin-bottom: 1.2rem; padding-bottom: 0.7rem;
+            border-bottom: 1px solid var(--cyan-border);
+            text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem;
         }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        /* TIMELINE */
+        .timeline { position: relative; padding-left: 1.5rem; }
+        .timeline::before {
+            content: '';
+            position: absolute; left: 0; top: 6px; bottom: 6px;
+            width: 1px; background: var(--cyan-border);
+        }
+        .timeline-item { position: relative; margin-bottom: 2rem; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot {
+            position: absolute; left: -1.87rem; top: 5px;
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--cyan);
+            border: 2px solid var(--bg);
+            box-shadow: 0 0 0 2px var(--cyan-border);
+        }
+        .timeline-period {
+            font-size: 0.75rem; color: var(--cyan);
+            font-family: 'Syne', sans-serif; font-weight: 600;
+            letter-spacing: 0.05em; margin-bottom: 0.3rem;
+        }
+        .timeline-role {
+            font-size: 1rem; font-weight: 500; margin-bottom: 0.15rem;
+        }
+        .timeline-company {
+            font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem;
+        }
+        .timeline-badge {
+            display: inline-block;
+            background: var(--cyan-dim); border: 1px solid var(--cyan-border);
+            border-radius: 50px; padding: 0.15rem 0.7rem;
+            font-size: 0.72rem; color: var(--cyan);
+            font-family: 'Syne', sans-serif; font-weight: 600;
+        }
+        .timeline-desc {
+            font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.7;
         }
 
+        /* SKILLS */
+        .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .skill-tag {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.2);
+            background: var(--cyan-dim); border: 1px solid var(--cyan-border);
+            border-radius: 50px; padding: 0.3rem 0.8rem;
+            font-size: 0.78rem; color: #c0c8e0;
+        }
+
+        /* SKILL BARS */
+        .skill-bar-item { margin-bottom: 1rem; }
+        .skill-bar-item:last-child { margin-bottom: 0; }
+        .skill-bar-header {
+            display: flex; justify-content: space-between;
+            font-size: 0.82rem; margin-bottom: 0.4rem;
+        }
+        .skill-bar-name { color: var(--text); font-weight: 500; }
+        .skill-bar-level { color: var(--muted); }
+        .skill-bar-track {
+            height: 5px; background: rgba(255,255,255,0.07);
+            border-radius: 50px; overflow: hidden;
+        }
+        .skill-bar-fill {
+            height: 100%; background: var(--cyan);
             border-radius: 50px;
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            color: #c0c8e0;
+            animation: fillBar 1.2s ease forwards;
+            transform-origin: left;
+        }
+        @keyframes fillBar {
+            from { width: 0; }
         }
 
-        .project {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .project:last-child {
-            border-bottom: none;
-        }
-
-        .project-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #e5e9f0;
-            margin-bottom: 0.3rem;
-        }
-
+        /* PROJECTS */
+        .project { margin-bottom: 1.4rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--faint); }
+        .project:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .project-title { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.25rem; }
         .project-tools {
-            font-size: 0.75rem;
-            color: #00d4ff;
-            margin-bottom: 0.5rem;
+            font-size: 0.72rem; color: var(--cyan);
+            font-family: 'Syne', sans-serif; font-weight: 600;
+            letter-spacing: 0.05em; margin-bottom: 0.5rem;
         }
+        .project-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
 
-        .project-desc {
-            font-size: 0.85rem;
-            color: #a0a8c0;
-        }
-
+        /* LANG */
         .lang-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 0.6rem; padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--faint);
         }
-
-        .lang-name {
-            font-weight: 500;
-        }
-
+        .lang-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .lang-name { font-size: 0.9rem; font-weight: 500; }
         .lang-level {
-            color: #a0a8c0;
-            font-size: 0.8rem;
+            font-size: 0.75rem; color: var(--muted);
+            background: var(--faint); padding: 0.2rem 0.6rem; border-radius: 50px;
         }
 
-        /* Full width */
-        .full-width {
-            grid-column: span 2;
-        }
+        /* FORMATION */
+        .formation-item { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+        .formation-item:last-child { margin-bottom: 0; }
+        .formation-check { color: var(--cyan); font-size: 0.8rem; margin-top: 0.2rem; flex-shrink: 0; }
+        .formation-text { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
 
-        /* Footer */
+        /* FOOTER */
         footer {
-            text-align: center;
-            padding: 2rem 5%;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #6a7290;
-            font-size: 0.8rem;
+            text-align: center; padding: 2rem 5%;
+            border-top: 1px solid var(--faint);
+            color: #4a5268; font-size: 0.8rem;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            .full-width {
-                grid-column: span 1;
-            }
-            .contact-bar {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
-            }
+            .nav-links { display: none; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .contact-bar { flex-direction: column; gap: 0.7rem; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">theData<span>Controller</span></a>
-            <div class="nav-links">
-                <a href="index.html">Accueil</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact" class="btn-nav">Me contacter</a>
-            </div>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">theData<span>Controller</span></a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn-nav">Me contacter</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
-        <div class="header">
-            <h1>Gilbert Elisée <span>GUESSELE</span></h1>
-            <div class="title">Contrôleur de Gestion & Data Analyst</div>
-            <div class="location">📍 Yaoundé, Cameroun · Zone CEMAC</div>
-            <div class="contact-bar" id="contact">
-                <a href="mailto:guessele.controleur@gmail.com">📧 guessele.controleur@gmail.com</a>
-                <a href="tel:+237621173456">📞 +237 621 173 456</a>
-                <a href="https://wa.me/237653880699" target="_blank">💬 WhatsApp : +237 653 880 699</a>
-                <a href="https://www.linkedin.com/in/guessele-gilbert" target="_blank">🔗 LinkedIn</a>
-            </div>
-        </div>
-
-        <div class="grid-2">
-            <!-- Colonne gauche -->
-            <div>
-                <div class="card">
-                    <div class="card-title">🎓 Formation & Diplômes</div>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 0.8rem;">✓ Master I recherche en Gouvernance Financière</li>
-                        <li style="margin-bottom: 0.8rem;">✓ Licence en Ingénierie Économique (Économie Mathématique)</li>
-                        <li style="margin-bottom: 0.8rem;">✓ Licence en Administration et Gestion des entreprises</li>
-                        <li style="margin-bottom: 0.8rem;">✓ Baccalauréat CG (Comptabilité et Gestion)</li>
-                        <li style="margin-bottom: 0.8rem;">✓ CAP ESCOM (Employé des Services Comptables)</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">💼 Compétences Comptables & Finance</div>
-                    <div class="skills-list">
-                        <span class="skill-tag">Comptabilité générale & analytique</span>
-                        <span class="skill-tag">Reporting financier</span>
-                        <span class="skill-tag">Contrôle de gestion</span>
-                        <span class="skill-tag">Audit & révision</span>
-                        <span class="skill-tag">Sage Comptabilité</span>
-                        <span class="skill-tag">Analyse de rentabilité</span>
-                        <span class="skill-tag">Gestion budgétaire</span>
-                        <span class="skill-tag">Conseil aux PME</span>
-                        <span class="skill-tag">Fiscalité camerounaise</span>
-                        <span class="skill-tag">Normes OHADA</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">📊 Compétences Data</div>
-                    <div class="skills-list">
-                        <span class="skill-tag">Excel avancé (Power Query, TCD)</span>
-                        <span class="skill-tag">Power BI (dashboards)</span>
-                        <span class="skill-tag">Google Data Analytics (certificat en cours)</span>
-                        <span class="skill-tag">SQL (requêtes & analyse)</span>
-                        <span class="skill-tag">Python (en apprentissage)</span>
-                        <span class="skill-tag">Nettoyage & préparation de données</span>
-                        <span class="skill-tag">Consolidation multi-sources</span>
-                        <span class="skill-tag">Reporting automatisé</span>
-                        <span class="skill-tag">Analyse budgétaire (budget vs réalisé)</span>
-                        <span class="skill-tag">Tableaux de bord KPI</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">🌍 Langues</div>
-                    <div class="lang-item">
-                        <span class="lang-name">Français</span>
-                        <span class="lang-level">Natif</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">Anglais</span>
-                        <span class="lang-level">B1 (intermédiaire)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Colonne droite -->
-            <div>
-                <div class="card">
-                    <div class="card-title">📈 Expérience</div>
-                    <div style="margin-bottom: 1rem;">
-                        <div style="font-weight: 600; color: #00d4ff;">6 ans d'expérience comptable</div>
-                        <div style="font-size: 0.85rem; color: #a0a8c0;">dont 4 ans en cabinet à Yaoundé</div>
-                    </div>
-                    <p style="font-size: 0.85rem; color: #a0a8c0;">Je combine une solide expérience en comptabilité cabinet avec une spécialisation en data analytics — un profil rare pour piloter la performance des PME et organisations en Afrique centrale.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">🚀 Projets Data</div>
-                    
-                    <div class="project">
-                        <div class="project-title">📊 Tableau de bord financier PME</div>
-                        <div class="project-tools">Power BI · Excel · Power Query</div>
-                        <div class="project-desc">Automatisation du reporting mensuel d'une PME yaoundéenne : suivi du CA, des charges et de la trésorerie en temps réel. Réduction du temps de production de 70%.</div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-title">📈 Analyse économique Cameroun</div>
-                        <div class="project-tools">Python · SQL · Google Sheets</div>
-                        <div class="project-desc">Analyse des données macroéconomiques du Cameroun (INS & Banque Mondiale) : évolution du PIB, inflation, secteurs porteurs. Rapport interactif et visualisations.</div>
-                    </div>
-
-                    <div class="project">
-                        <div class="project-title">💰 Système de suivi budgétaire</div>
-                        <div class="project-tools">Excel avancé · TCD · VBA</div>
-                        <div class="project-desc">Création d'un modèle de suivi budgétaire avec analyse des écarts (budget vs réalisé) pour un cabinet comptable, avec alertes automatiques sur les dépassements.</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-title">🎯 Ce que je recherche</div>
-                    <p style="font-size: 0.9rem;">Je suis disponible pour des <strong>missions freelance</strong> et des <strong>collaborations</strong> à Yaoundé et dans toute la zone CEMAC :</p>
-                    <ul style="margin-top: 0.8rem; padding-left: 1.2rem; color: #a0a8c0; font-size: 0.85rem;">
-                        <li>Création de tableaux de bord sur mesure</li>
-                        <li>Automatisation du reporting financier</li>
-                        <li>Mise en place de contrôle de gestion data-driven</li>
-                        <li>Formation aux outils data (Excel, Power BI)</li>
-                    </ul>
-                </div>
-            </div>
+<div class="container">
+    <div class="header">
+        <h1>Gilbert Elisée <span>GUESSELE</span></h1>
+        <div class="title">Contrôleur de Gestion & Data Analyst</div>
+        <div class="location">📍 Yaoundé, Cameroun · Zone CEMAC</div>
+        <div class="contact-bar" id="contact">
+            <a href="mailto:guessele.controleur@gmail.com">📧 guessele.controleur@gmail.com</a>
+            <a href="tel:+237621173456">📞 +237 621 173 456</a>
+            <a href="https://wa.me/237653880699" target="_blank">💬 WhatsApp : +237 653 880 699</a>
+            <a href="https://www.linkedin.com/in/guessele-gilbert" target="_blank">🔗 LinkedIn</a>
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 Gilbert Elisée GUESSELE · theDataController · Yaoundé, Cameroun</p>
-        <p style="margin-top: 0.3rem;">📧 guessele.controleur@gmail.com | 📞 +237 621 173 456</p>
-    </footer>
+    <div class="grid-2">
+
+        <!-- COLONNE GAUCHE -->
+        <div>
+            <div class="card">
+                <div class="card-title">🎓 Formation & Diplômes</div>
+                <div class="formation-item">
+                    <span class="formation-check">✓</span>
+                    <span class="formation-text">Master I Recherche en Gouvernance Financière</span>
+                </div>
+                <div class="formation-item">
+                    <span class="formation-check">✓</span>
+                    <span class="formation-text">Licence en Ingénierie Économique (Économie Mathématique)</span>
+                </div>
+                <div class="formation-item">
+                    <span class="formation-check">✓</span>
+                    <span class="formation-text">Licence en Administration et Gestion des entreprises</span>
+                </div>
+                <div class="formation-item">
+                    <span class="formation-check">✓</span>
+                    <span class="formation-text">Baccalauréat CG (Comptabilité et Gestion)</span>
+                </div>
+                <div class="formation-item">
+                    <span class="formation-check">✓</span>
+                    <span class="formation-text">CAP ESCOM (Employé des Services Comptables)</span>
+                </div>
+                <div class="formation-item">
+                    <span class="formation-check">⏳</span>
+                    <span class="formation-text">Google Data Analytics Certificate <em style="color: var(--cyan); font-style: normal;">(en cours)</em></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">💼 Compétences Finance & Comptabilité</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Comptabilité générale & analytique</span>
+                    <span class="skill-tag">Reporting financier</span>
+                    <span class="skill-tag">Contrôle de gestion</span>
+                    <span class="skill-tag">Audit & révision</span>
+                    <span class="skill-tag">Sage Comptabilité</span>
+                    <span class="skill-tag">Analyse de rentabilité</span>
+                    <span class="skill-tag">Gestion budgétaire</span>
+                    <span class="skill-tag">Conseil aux PME</span>
+                    <span class="skill-tag">Fiscalité camerounaise</span>
+                    <span class="skill-tag">Normes OHADA</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">📊 Niveaux Data & Outils</div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">Excel avancé (Power Query, TCD)</span>
+                        <span class="skill-bar-level">Expert</span>
+                    </div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">Power BI</span>
+                        <span class="skill-bar-level">Avancé</span>
+                    </div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">SQL</span>
+                        <span class="skill-bar-level">Intermédiaire</span>
+                    </div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 65%;"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">Python</span>
+                        <span class="skill-bar-level">Débutant avancé</span>
+                    </div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 40%;"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">Google Sheets & Data Studio</span>
+                        <span class="skill-bar-level">Avancé</span>
+                    </div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🌍 Langues</div>
+                <div class="lang-item">
+                    <span class="lang-name">Français</span>
+                    <span class="lang-level">Natif</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">Anglais</span>
+                    <span class="lang-level">B1 – Intermédiaire</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div>
+            <div class="card">
+                <div class="card-title">📈 Parcours Professionnel</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-period">Février 2026 – Présent</div>
+                        <div class="timeline-role">Assistant Financial Controller</div>
+                        <div class="timeline-company">Cabinet Minala Barthélémy · Yaoundé, Cameroun</div>
+                        <span class="timeline-badge">Poste actuel</span>
+                        <div class="timeline-desc">Pilotage du reporting financier, production de tableaux de bord KPI, analyse des écarts budget/réalisé, accompagnement des clients PME dans leur contrôle de gestion data-driven. Automatisation des processus de reporting mensuel.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--muted);"></div>
+                        <div class="timeline-period">Juillet 2022 – Février 2026</div>
+                        <div class="timeline-role">Comptable Junior</div>
+                        <div class="timeline-company">Cabinet Minala Barthélémy · Yaoundé, Cameroun</div>
+                        <div class="timeline-desc">Tenue de comptabilité générale et analytique pour un portefeuille de PME locales. Déclarations fiscales, préparation des états financiers, révision comptable, application des normes OHADA et du droit camerounais.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🚀 Projets Data Réalisés</div>
+                <div class="project">
+                    <div class="project-title">Tableau de bord financier PME</div>
+                    <div class="project-tools">POWER BI · EXCEL · POWER QUERY</div>
+                    <div class="project-desc">Automatisation du reporting mensuel d'une PME yaoundéenne : suivi du CA, des charges et de la trésorerie en temps réel. Réduction du temps de production de 70%.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Analyse économique Cameroun</div>
+                    <div class="project-tools">PYTHON · SQL · GOOGLE SHEETS</div>
+                    <div class="project-desc">Analyse des données macroéconomiques du Cameroun (INS & Banque Mondiale) : évolution du PIB, inflation, secteurs porteurs. Rapport interactif avec visualisations.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Système de suivi budgétaire</div>
+                    <div class="project-tools">EXCEL AVANCÉ · TCD · VBA</div>
+                    <div class="project-desc">Modèle de suivi budgétaire avec analyse des écarts (budget vs réalisé) pour un cabinet comptable, avec alertes automatiques sur les dépassements.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎯 Missions Disponibles</div>
+                <p style="font-size: 0.88rem; margin-bottom: 1rem;">Disponible pour des <strong>missions freelance</strong> et des <strong>collaborations</strong> à Yaoundé et dans toute la zone CEMAC :</p>
+                <div class="skills-list">
+                    <span class="skill-tag">Tableaux de bord sur mesure</span>
+                    <span class="skill-tag">Automatisation du reporting</span>
+                    <span class="skill-tag">Contrôle de gestion data-driven</span>
+                    <span class="skill-tag">Formation Excel & Power BI</span>
+                    <span class="skill-tag">Audit & révision comptable</span>
+                    <span class="skill-tag">Conseil fiscal PME (OHADA)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Gilbert Elisée GUESSELE · theDataController · Yaoundé, Cameroun</p>
+    <p style="margin-top: 0.4rem;">📧 guessele.controleur@gmail.com | 📞 +237 621 173 456 | 💬 +237 653 880 699</p>
+</footer>
+
 </body>
 </html>
